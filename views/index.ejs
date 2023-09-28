@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="w-[100vw] bg-gray-200  h-[100vh]">
+
+        <div class="w-[100vw] h-[70px] bg-blue-200 flex">
+            <div class="  text-3xl text-white ml-[20%] pt-[12px] font-semibold">
+                Great Quotes
+            </div>
+
+            <div class="flex ml-[50%] mt-[16px] justify-between"> 
+                <a href="/" class="text-xl font-semibold  text-white">
+                    All Quotes
+                </a>
+                <a href="/comment/new" class="text-xl ml-4 font-semibold text-white">
+                    New Quotes
+                </a>
+            </div>
+            
+        </div>
+<!-- DFDSFDFDSF -->
+        <div class="flex flex-col mx-auto h-[100vh] my-5 w-[50%] gap-y-4  p-8">
+            
+            <% for(let item of comments){ %>
+
+            <div class="bg-blue-300  flex p-4">
+                <div class="flex flex-col">
+
+                    <p class="text-lg font-semibold w-[400px] truncate"><%= item.comment %></p>
+                    <h2 class="text-xl font-bold truncate">~ <%= item.username %></h2>
+                </div>
+
+                <!-- DSAFDJKHFKDSHFKJ -->
+
+                <a class=" bg-blue-800 ml-[90px] items-center h-[50px] p-3 hover:bg-green-800 text-white font-bold py-2 px-4 border border-green-800 rounded" href="/comments/<%= item.id %>">View Full Quote</a>
+                <!-- DSFSDFSDGFEG -->
+            </div>
+            <div class="flex jn">
+
+        </div>
+            <% } %>
+        </div>
+            
+        </div>
+</body>
+</html>
